@@ -4,20 +4,21 @@ const ExpenseSchema= new mongoose.Schema({
         type:Number,
        
     },
-    
-    otherCharges:[{
-        billname:{
-            type:Array,
+        medicinename:{
+            type:String,
             required:true,
         },
-        billamount:{
+        medicineamount:{
             type:Number,
             required:true,
         },
-    }],
+        testamount:{
+            type:Number,
+            required:true,
+        },
     
     patient:{
-        type:mongoose.Schema.ObjectId,
+        type:String,
         ref:"NewPatient"
     },
 })

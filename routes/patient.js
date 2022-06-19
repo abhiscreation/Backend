@@ -56,7 +56,7 @@ router.put("/update/:_id", function (req, res) {
       //delete data of particular patient by id
 router.delete("/delete/:_id", function (req, res) {
             const { _id } = req.params;
-            patient.findOneAndDelete({ _id }, function (err, data) {
+            patient.findOneAndDelete({ _id }, function(err, data) {
               if (err) {
                 res.status(500).json({ status: false, message: err.toString() });
               } else {
